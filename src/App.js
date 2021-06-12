@@ -12,18 +12,18 @@ function App() {
   };
 
   return (
-    <CryptoProvider>
-      <BrowserRouter>
-        <div className="App">
+    <div className="App">
+      <CryptoProvider>
+        <BrowserRouter>
           <Switch>
             <Route path="/" exact>
               <Home search={search} getCryptoName={getCryptoName} />
             </Route>
             <Route path="/:id" component={Coin} />
           </Switch>
-        </div>
-      </BrowserRouter>
-    </CryptoProvider>
+        </BrowserRouter>
+      </CryptoProvider>
+    </div>
   );
 }
 

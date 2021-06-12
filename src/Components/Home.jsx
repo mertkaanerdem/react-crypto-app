@@ -5,10 +5,12 @@ function Home({ search, getCryptoName }) {
   const context = useContext(CryptoContext);
   return (
     <div className="container">
-      <h1 className="text-center mt-4">Cryptos Mryptos</h1>
+      <div className="bg-white m-1 p-2 rounded">
+        <h1 className="text-center text-success">Cryptos Mryptos</h1>
+      </div>
       <div className="row">
         <form>
-          <div className="col-md-12 w-50 text-center mx-auto mt-5">
+          <div className="col-md-5 mx-auto mt-4">
             <input
               className="form-control"
               type="text"
@@ -31,14 +33,14 @@ function Home({ search, getCryptoName }) {
           })
           .map((val) => (
             <div className="col-6 col-md-4 mt-5" key={val.id}>
-              <div className="card text-center">
+              <div className="card text-center bg-success shadow">
                 <div
-                  className="mx-auto w-50 mt-5 mb-5"
+                  className="mx-auto w-50 mt-5 mb-5 "
                   style={{ width: "244px", height: "150px" }}
                 >
                   <img src={val.image} className="card-img-top" alt={val.id} />
                 </div>
-                <div className="card-body">
+                <div className="card-body text-white">
                   <h5 className="card-title">
                     Current Price : {val.current_price}
                   </h5>
@@ -50,7 +52,7 @@ function Home({ search, getCryptoName }) {
                     Price Change Percentage - 24h :{" "}
                     {val.price_change_percentage_24h}
                   </p> */}
-                  <Link to={val.id} className="btn btn-warning">
+                  <Link to={val.id} className="btn btn-warning shadow">
                     Details
                   </Link>
                 </div>

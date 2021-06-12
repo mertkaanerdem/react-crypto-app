@@ -9,12 +9,14 @@ function Coin() {
   const filter = context.cryptos.filter((item) => item.id === id);
   return (
     <div className="container text-center">
-      <h1 className="text-center mt-4">Cryptos Mryptos</h1>
+      <div className="bg-white m-1 p-2 rounded">
+        <h1 className="text-center text-success">Cryptos Mryptos</h1>
+      </div>
 
       <div className="row offset-4">
-        <div className="col-6 mt-5">
+        <div className="col-6 mt-5 text-white ">
           {filter.map((item) => (
-            <div className="card" key={item.id}>
+            <div className="card bg-success shadow" key={item.id}>
               <div
                 className="mx-auto"
                 style={{ width: "244px", height: "244px" }}
@@ -34,7 +36,7 @@ function Coin() {
                   {item.price_change_percentage_24h}
                 </p> */}
               </div>
-              <Link to="/" className="btn btn-warning">
+              <Link to="/" className="  btn btn-warning shadow">
                 Home
               </Link>
             </div>
